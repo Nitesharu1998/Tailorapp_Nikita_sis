@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this,nav_activity.class);
                 startActivity(intent);
+                finish();// kills the activity from backstack
             }else
                 //incorrect
                 Toast.makeText(MainActivity.this,"LOGIN FAILED",Toast.LENGTH_SHORT).show();
