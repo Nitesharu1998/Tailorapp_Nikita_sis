@@ -13,6 +13,7 @@ import com.tailorapp.data.MyDbHandler;
 public class Top extends AppCompatActivity {
     Button save;
     private EditText fulllength, chestround, waistlength, waistround, seatlength, seatround, shoulder, readyshoulder, sleeveslength, sleevesround, frontneck, backneck, armhole, topbottom;
+    String custPhoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,13 @@ public class Top extends AppCompatActivity {
         topbottom = findViewById(R.id.edtxt14);
         save = findViewById(R.id.save);
 
+        if (getIntent().getData()!=null){
+            custPhoneNumber=getIntent().getStringExtra("PhoneNumber");
+        }
+        else {
+            Toast.makeText(this, "No user selected", Toast.LENGTH_SHORT).show();
+        }
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,15 +64,12 @@ public class Top extends AppCompatActivity {
                 Armhole = armhole.getText().toString();
                 Topbottom = topbottom.getText().toString();
 
-                boolean i = db.addtopinfo(Fulllength, Chestround, Waistlength, Waistround, Seatlength, Seatround, Shoulder, Readyshoulder, Sleeveslength, Sleevesround, Frontneck, Backneck, Armhole, Topbottom);
+                boolean i = db.addtopinfo(custPhoneNumber,Fulllength, Chestround, Waistlength, Waistround, Seatlength, Seatround, Shoulder, Readyshoulder, Sleeveslength, Sleevesround, Frontneck, Backneck, Armhole, Topbottom);
                 if (i) {
                     Toast.makeText(Top.this, "Successful", Toast.LENGTH_SHORT).show();
 
-
                 } else {
                     Toast.makeText(Top.this, " Not Successful", Toast.LENGTH_SHORT).show();
-
-
                 }
             }
 

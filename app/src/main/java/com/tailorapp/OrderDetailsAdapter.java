@@ -36,15 +36,15 @@ public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapte
 
 
     @Override
-    public void onBindViewHolder(@NonNull myviewholder2 holder, final int position) {// hi error nahiye. just warning ahe ignore it..
+    public void onBindViewHolder(@NonNull myviewholder2 holder, final int position) {
         holder.dataname.setText(dataholder2.get(position).getName());
 
         holder.complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, Details.class);
-                intent.putExtra("customer_name", dataholder2.get(position).getName());
-                System.out.println("name to send>>>>>>>>>>>>>>>>>>"+holder.dataname.getText().toString());
+                intent.putExtra("customer_name", dataholder2.get(position).getPhonenumber());
+                System.out.println("name to send>>>>>>>>>>>>>>>>>>"+dataholder2.get(position).getPhonenumber());
                 context.startActivity(intent);
             }
         });

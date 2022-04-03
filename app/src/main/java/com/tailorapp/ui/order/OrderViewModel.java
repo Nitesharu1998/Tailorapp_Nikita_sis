@@ -1,17 +1,22 @@
 package com.tailorapp.ui.order;
 
+import android.content.Context;
+
 public class OrderViewModel {
     String name;
     String phonenumber;
     String email;
+    Context context;
 
-    public OrderViewModel(String name) {
-        this.name = name;
+    public OrderViewModel(String email, String phonenumber, String name) {
+        this.phonenumber = phonenumber;
+        this.name=name;
+        this.email = email;
     }
 
     public OrderViewModel(String phonenumber,String email) {
         this.phonenumber = phonenumber;
-        this.email = email;
+
 
     }
 

@@ -65,8 +65,18 @@ public class Customerdetails extends AppCompatActivity implements View.OnClickLi
             email.setText("");
 
         }
+        if (Name.equals("") && !PhoneNumber.equals("") && Email.equals("")){
+            if (db.checkCustomer(PhoneNumber.trim())){
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.sid1, new OrderFragment(PhoneNumber.trim()));
+                order.setVisibility(View.GONE);
+                fragmentTransaction.commit();
+            }else{
+                Toast.makeText(this, "No user found, kindly add customer", Toast.LENGTH_SHORT).show();
+            }
+        }
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.sid1, new OrderFragment());
+        fragmentTransaction.replace(R.id.sid1, new OrderFragment(Customerdetails.this));
         order.setVisibility(View.GONE);
         fragmentTransaction.commit();
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:visibility="gone"
         android:layout_gravity="center"
         android:padding="8dp">
 
@@ -114,4 +115,9 @@
 
     </LinearLayout>
 
-</ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rclv_allOrders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -16,8 +16,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="417dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="371dp"
         android:background="@drawable/custom_button"
         android:text="View Orderdetails" />
 
@@ -27,20 +27,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="288dp"
         android:background="@drawable/custom_button"
         android:text="Add customer" />
 
-    <Button
-        android:id="@+id/addOrder"
-        android:layout_width="265dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="323dp"
-        android:background="@drawable/custom_button"
-        android:text="Add Order" />
+    <!-- <Button
+         android:id="@+id/addOrder"
+         android:layout_width="265dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentStart="true"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginStart="74dp"
+         android:layout_marginTop="323dp"
+         android:background="@drawable/custom_button"
+         android:text="Add Order" />-->
+
 </RelativeLayout>

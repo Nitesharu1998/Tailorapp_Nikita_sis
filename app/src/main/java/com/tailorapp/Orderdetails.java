@@ -34,13 +34,12 @@ public class Orderdetails extends AppCompatActivity {
         Cursor cursor = new MyDbHandler(Orderdetails.this).readalldata();
         if (cursor != null){
             while (cursor.moveToNext()) {
-                OrderViewModel obj = new OrderViewModel(cursor.getString(1));
+                OrderViewModel obj = new OrderViewModel(cursor.getString(3), cursor.getString(2), cursor.getString(1));
                 dataholder2.add(obj);
             }
             if  (dataholder2.size()!=0){
                 OrderDetailsAdapter adapter = new OrderDetailsAdapter(context, dataholder2);
                 recview2.setAdapter(adapter);
-
             }
         }
     }
@@ -50,6 +49,4 @@ public class Orderdetails extends AppCompatActivity {
         completebtn = findViewById(R.id.complete);
         context = Orderdetails.this;
     }
-
-
 }

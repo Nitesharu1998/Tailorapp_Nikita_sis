@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/StudioProjects/Tailorapp_Nikita_sis/app/src/main/res/layout/activity_details.xml" value="0.12037037037037036" />
+        <entry key="..\:/StudioProjects/Tailorapp_Nikita_sis/app/src/main/res/layout/fragment_customer.xml" value="0.2421875" />
+        <entry key="..\:/StudioProjects/Tailorapp_Nikita_sis/app/src/main/res/layout/fragment_home.xml" value="0.2421875" />
+        <entry key="..\:/StudioProjects/Tailorapp_Nikita_sis/app/src/main/res/layout/fragment_order.xml" value="0.2421875" />
         <entry key="..\:/Users/T0763/StudioProjects/Tailorapp_test/app/src/main/res/drawable/button_bg.xml" value="0.1" />
         <entry key="..\:/Users/T0763/StudioProjects/Tailorapp_test/app/src/main/res/drawable/textview_bg.xml" value="0.1" />
         <entry key="..\:/Users/T0763/StudioProjects/Tailorapp_test/app/src/main/res/layout/activity_customerdetails.xml" value="0.11302083333333333" />

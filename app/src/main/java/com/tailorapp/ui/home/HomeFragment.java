@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         AddCustomerBtn= view.findViewById(R.id.addCustomer);
-        AddOrderBtn= view.findViewById(R.id.addOrder);
+        /*AddOrderBtn= view.findViewById(R.id.addOrder);*/
         Vieworderdetailsbtn=view.findViewById(R.id.viewdetails);
 
         AddCustomerBtn.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(HomeFragment.this.getActivity(),Customerdetails.class));
             }
         });
-        AddOrderBtn.setOnClickListener(new View.OnClickListener() {
+       /* AddOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Fragment newFragment = new OrderFragment();
@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
                 // Commit the transaction
                 transaction.commit();
             }
-        });
+        });*/
         Vieworderdetailsbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,9 +60,6 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
-
-
 
         return view;
     }

@@ -11,29 +11,39 @@ import android.widget.Toast;
 import com.tailorapp.data.MyDbHandler;
 
 public class Chaudidar extends AppCompatActivity {
-private EditText fulllength,seatround, bottomround, kneelength,kneeround;
-Button savebtn;
+    private EditText fulllength, seatround, bottomround, kneelength, kneeround;
+    Button savebtn;
+    String custPhonenumber;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chaudidar);
         MyDbHandler db = new MyDbHandler(Chaudidar.this);
-        fulllength=findViewById(R.id.etxt1);
-        seatround=findViewById(R.id.etxt2);
-        bottomround=findViewById(R.id.etxt3);
-        kneelength=findViewById(R.id.etxt4);
-        kneeround=findViewById(R.id.etxt5);
-        savebtn=findViewById(R.id.savebtn);
+        fulllength = findViewById(R.id.etxt1);
+        seatround = findViewById(R.id.etxt2);
+        bottomround = findViewById(R.id.etxt3);
+        kneelength = findViewById(R.id.etxt4);
+        kneeround = findViewById(R.id.etxt5);
+        savebtn = findViewById(R.id.savebtn);
+
+
+        if (getIntent().getData() != null) {
+            custPhonenumber = getIntent().getStringExtra("PhoneNumber");
+        } else {
+            Toast.makeText(this, "No user selected", Toast.LENGTH_SHORT).show();
+        }
+
         savebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String Fulllength, Seatround, Bottomround, Kneelength,Kneeround;
+                String Fulllength, Seatround, Bottomround, Kneelength, Kneeround;
                 Fulllength = fulllength.getText().toString();
                 Seatround = seatround.getText().toString();
                 Bottomround = bottomround.getText().toString();
-               Kneelength = kneelength.getText().toString();
-               Kneeround =kneeround.getText().toString();
-                boolean i = db.addchuadidarinfo(Fulllength, Seatround, Bottomround, Kneelength,Kneeround);
+                Kneelength = kneelength.getText().toString();
+                Kneeround = kneeround.getText().toString();
+                boolean i = db.addchuadidarinfo(custPhonenumber,Fulllength, Seatround, Bottomround, Kneelength, Kneeround);
                 if (i) {
                     Toast.makeText(Chaudidar.this, "Successful", Toast.LENGTH_SHORT).show();
 
